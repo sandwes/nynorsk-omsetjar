@@ -2,7 +2,7 @@
 
 A simple, Google Translate-inspired web UI for translating between Norwegian **Bokmål** and **Nynorsk**, powered by the open-source [Apertium](https://apertium.org) machine-translation platform.
 
-Built as a promotional tool for [sanderwestnes.com](https://sanderwestnes.com) — professional human translation services.
+Built as a promotional tool for [sanderwestnes.com](https://sanderwestnes.com), professional human translation services.
 
 ## Features
 
@@ -11,7 +11,7 @@ Built as a promotional tool for [sanderwestnes.com](https://sanderwestnes.com) �
 - Copy-to-clipboard, character counter, `Ctrl/Cmd + Enter` to translate immediately
 - Dark mode (follows system preference)
 - Fully responsive
-- No build step, no backend — pure static HTML/CSS/JS
+- No build step, no backend; pure static HTML/CSS/JS
 
 ## How it works
 
@@ -19,7 +19,7 @@ The page calls the public [Apertium APY](https://wiki.apertium.org/wiki/Apertium
 `https://beta.apertium.org/apy/translate` directly from the browser, using the
 `nob|nno` and `nno|nob` language pairs.
 
-No user data is stored or proxied — requests go straight from the visitor's browser to the Apertium API.
+No user data is stored or proxied. Requests go straight from the visitor's browser to the Apertium API.
 
 ## Running locally
 
@@ -52,4 +52,4 @@ To use a custom subdomain (e.g. `translate.sanderwestnes.com`):
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE).

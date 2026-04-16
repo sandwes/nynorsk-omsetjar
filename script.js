@@ -30,7 +30,7 @@ function setActive(side, lang) {
   document.querySelectorAll(`.lang-btn[data-side="${side}"]`).forEach((btn) => {
     btn.classList.toggle("active", btn.dataset.lang === lang);
   });
-  // Prevent same-language on both sides — if a user clicks the same lang on
+  // Prevent same-language on both sides. If a user clicks the same lang on
   // the opposite side, auto-swap the other side.
   const otherSide = side === "source" ? "target" : "source";
   if (state[otherSide] === lang) {
@@ -105,7 +105,7 @@ async function translate() {
   } catch (err) {
     if (err.name === "AbortError") return; // superseded by a newer request
     console.error("Translation error:", err);
-    showError(`Klarte ikkje å omsetja: ${err.message}. Prøv igjen om litt.`);
+    showError(`Klarte ikke å oversette: ${err.message}. Prøv igjen om litt.`);
   } finally {
     setLoading(false);
   }

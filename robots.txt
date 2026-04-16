@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sandwes.github.io/nynorsk-omsetjar/sitemap.xml

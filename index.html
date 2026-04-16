@@ -3,13 +3,114 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nynorsk-omsetjar · Bokmål ↔ Nynorsk</title>
-  <meta name="description" content="Gratis maskinomsetjing mellom bokmål og nynorsk, drive av open kjeldekode frå Apertium. Ein promoteringstenesta frå sanderwestnes.com." />
+
+  <!-- Primary SEO -->
+  <title>Oversetter fra bokmål til nynorsk (gratis) | Sander Westnes</title>
+  <meta name="description" content="Oversett raskt mellom norsk bokmål og nynorsk. Gratis, uten innlogging, drevet av åpen maskinoversettelse fra Apertium. For utkast, notater og rask forståelse." />
+  <link rel="canonical" href="https://sandwes.github.io/nynorsk-omsetjar/" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="author" content="Sander Westnes" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sandwes.github.io/nynorsk-omsetjar/" />
+  <meta property="og:title" content="Oversetter fra bokmål til nynorsk (gratis)" />
+  <meta property="og:description" content="Rask maskinoversettelse mellom norsk bokmål og nynorsk. Gratis, uten innlogging. Laget av oversetter Sander Westnes." />
+  <meta property="og:locale" content="nb_NO" />
+  <meta property="og:site_name" content="Sander Westnes" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Oversetter fra bokmål til nynorsk (gratis)" />
+  <meta name="twitter:description" content="Rask maskinoversettelse mellom norsk bokmål og nynorsk, drevet av Apertium." />
+
+  <!-- Fonts & styles -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://beta.apertium.org" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="stylesheet" href="styles.css?v=3" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23e2755a'/%3E%3Ctext x='32' y='44' font-family='Inter,sans-serif' font-size='32' font-weight='700' text-anchor='middle' fill='white'%3ENn%3C/text%3E%3C/svg%3E" />
+
+  <!-- Structured data: WebApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Oversetter fra bokmål til nynorsk",
+    "url": "https://sandwes.github.io/nynorsk-omsetjar/",
+    "description": "Gratis maskinoversettelse mellom norsk bokmål og nynorsk, drevet av det åpne Apertium-prosjektet.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any (browser-based)",
+    "inLanguage": ["nb", "nn"],
+    "isAccessibleForFree": true,
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "NOK"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Sander Westnes",
+      "url": "https://sanderwestnes.com",
+      "jobTitle": "Teknisk oversetter og lokaliseringsekspert",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "UiT Norges arktiske universitet"
+      }
+    }
+  }
+  </script>
+
+  <!-- Structured data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Hvor god er maskinoversettelsen mellom bokmål og nynorsk?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Apertium er en av de beste åpne motorene for bokmål↔nynorsk og håndterer grammatikk og bøying godt. Den sliter derimot med nyanser, fagtermer, egennavn og kontekstavhengig tolkning. Forvent å måtte lese gjennom og korrigere."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Lagres teksten jeg skriver inn?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nei. Nettleseren din sender forespørselen direkte til Apertium sitt åpne API. Denne siden lagrer ingenting og sender ingenting videre til tredjeparter."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kan jeg oversette lange tekster?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, opp til 10 000 tegn per forespørsel. For større dokumenter anbefales det å dele dem opp, eller å bruke en profesjonell oversetter for kvalitetskontroll."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Er dette en offisiell tjeneste fra Apertium?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nei. Dette er en enkel nettside som bruker Apertium sitt åpne API. Siden er ikke tilknyttet eller endorsert av Apertium-prosjektet."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kan jeg oversette fra engelsk til nynorsk?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ikke her ennå. Apertium har en engelsk-til-nynorsk-motor, men kvaliteten holder ikke profesjonelle mål. For engelsk↔norsk anbefales en menneskelig oversetter."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -17,25 +118,34 @@
       <a class="brand" href="https://sanderwestnes.com" target="_blank" rel="noopener" aria-label="sanderwestnes.com">
         <span class="brand-name">Sander Westnes</span>
         <span class="brand-sep" aria-hidden="true"></span>
-        <span class="brand-product">Nynorsk-omsetjar</span>
+        <span class="brand-product">Oversetter bokmål&nbsp;↔&nbsp;nynorsk</span>
       </a>
       <nav class="header-nav">
         <a class="header-cta" href="https://sanderwestnes.com" target="_blank" rel="noopener">
-          Omsetjingstenester <span aria-hidden="true">&rarr;</span>
+          Oversettertjenester <span aria-hidden="true">→</span>
         </a>
       </nav>
     </div>
   </header>
 
   <main class="wrap" id="top">
-    <section class="translator" aria-label="Omsetjar">
+    <section class="hero">
+      <h1>Gratis oversetter fra bokmål til nynorsk</h1>
+      <p class="lede">
+        Rask maskinoversettelse mellom norsk bokmål og nynorsk, ferdig på sekunder og drevet av det åpne
+        <a href="https://apertium.org" target="_blank" rel="noopener">Apertium</a>-prosjektet.
+        Treffsikker nok for utkast, interne notater og rask forståelse. Trenger du publiseringsklar tekst? Da trenger du et menneske.
+      </p>
+    </section>
+
+    <section class="translator" aria-label="Oversetter">
       <div class="lang-bar">
-        <div class="lang-group" role="group" aria-label="Kjeldespråk">
+        <div class="lang-group" role="group" aria-label="Kildespråk">
           <button class="lang-btn active" data-side="source" data-lang="nob">Bokmål</button>
           <button class="lang-btn" data-side="source" data-lang="nno">Nynorsk</button>
         </div>
 
-        <button class="swap-btn" id="swapBtn" aria-label="Byt språk">
+        <button class="swap-btn" id="swapBtn" aria-label="Bytt språk">
           <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M7 4v16M7 4l-3 3M7 4l3 3M17 20V4M17 20l-3-3M17 20l3-3"/>
           </svg>
@@ -52,7 +162,7 @@
           <textarea
             id="sourceText"
             placeholder="Skriv eller lim inn tekst her…"
-            aria-label="Kjeldetekst"
+            aria-label="Kildetekst"
             maxlength="10000"
             autofocus
           ></textarea>
@@ -65,12 +175,12 @@
         </div>
 
         <div class="panel panel-target">
-          <div id="targetText" class="target-output" aria-live="polite" aria-label="Omsett tekst"></div>
+          <div id="targetText" class="target-output" aria-live="polite" aria-label="Oversatt tekst"></div>
           <div class="loader" id="loader" hidden>
             <span class="dot"></span><span class="dot"></span><span class="dot"></span>
           </div>
           <div class="panel-footer">
-            <button class="icon-btn" id="copyBtn" title="Kopier" aria-label="Kopier omsett tekst">
+            <button class="icon-btn" id="copyBtn" title="Kopier" aria-label="Kopier oversatt tekst">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
               <span>Kopier</span>
             </button>
@@ -84,33 +194,121 @@
 
     <aside class="cta-banner">
       <div class="cta-copy">
-        <h2>Maskinar tek deg eit stykke på veg. Menneske tek deg heile vegen.</h2>
+        <h2>Maskiner tar deg et stykke på vei. Mennesker tar deg hele veien.</h2>
         <p>
-          Denne sida gjer grovarbeidet, men nyansar, stil og fagspråk krev ein profesjonell.
-          Sander Westnes tilbyr omsetjing mellom bokmål, nynorsk og engelsk &mdash; med fagleg tyngd og språkleg presisjon.
+          Denne siden gjør grovarbeidet, men nyanser, stil og fagspråk krever en profesjonell.
+          Sander Westnes tilbyr oversettelse mellom bokmål, nynorsk og engelsk, med faglig tyngd og språklig presisjon.
         </p>
       </div>
       <a class="cta-btn" href="https://sanderwestnes.com" target="_blank" rel="noopener">
-        Sjå tenestene &rarr;
+        Se tjenestene <span aria-hidden="true">→</span>
       </a>
     </aside>
+
+    <article class="content-prose">
+      <h2>Om bokmål og nynorsk</h2>
+      <p>
+        Norsk har to offisielle skriftspråk: bokmål og nynorsk. Rundt 85 % av befolkningen skriver bokmål til daglig,
+        mens nynorsk står sterkt på Vestlandet og er en obligatorisk del av norsk grunnskole. Offentlige etater,
+        kommuner og flere utdanningsinstitusjoner er lovpålagt å publisere innhold i begge målformer. Derfor er
+        rask oversettelse mellom bokmål og nynorsk etterspurt blant kommunikatører, studenter og offentlig ansatte.
+      </p>
+
+      <h2>Når bør du bruke maskinoversettelse?</h2>
+      <p>Maskinoversettelse egner seg godt til:</p>
+      <ul>
+        <li>interne notater, huskelister og e-poster</li>
+        <li>rask forståelse av en tekst du ikke vil lese i sin helhet</li>
+        <li>første utkast som du selv etterredigerer</li>
+        <li>idéutveksling og utforskning på tvers av målformer</li>
+      </ul>
+      <p>
+        Til publiseringsklar tekst som nettsider, lovtekst, markedsføring, spill eller fagbøker bør du alltid ha et
+        menneske inn i prosessen. Maskiner håndterer grammatikk og ordbytting, men ikke stil, tone, fagterminologi eller
+        den intuitive forskjellen mellom «direkte oversatt bokmål» og ekte nynorsk.
+      </p>
+
+      <h2 id="tjenester">Profesjonell oversettelse fra Sander Westnes</h2>
+      <p>
+        Jeg er utdannet i datavitenskap fra UiT Norges arktiske universitet og har siden 2016 jobbet med språk og
+        lokalisering i skjæringspunktet mellom teknologi og norsk. Jeg spesialiserer meg på:
+      </p>
+      <ul>
+        <li>teknisk oversettelse mellom engelsk, bokmål og nynorsk</li>
+        <li>spill- og programvarelokalisering</li>
+        <li>nettsider og markedskommunikasjon for norsk marked</li>
+        <li>språkrevisjon og stilkontroll</li>
+      </ul>
+      <p>
+        Med faglig bakgrunn i datavitenskap forstår jeg både kildekoden og kildeteksten. Det betyr færre feil i
+        tekniske prosjekter, og norsk som faktisk leses som norsk, ikke som oversatt engelsk.
+      </p>
+      <p>
+        <a class="cta-inline" href="https://sanderwestnes.com" target="_blank" rel="noopener">
+          Se tjenestene på sanderwestnes.com <span aria-hidden="true">→</span>
+        </a>
+      </p>
+
+      <h2 id="faq">Ofte stilte spørsmål</h2>
+      <div class="faq">
+        <details>
+          <summary>Hvor god er maskinoversettelsen mellom bokmål og nynorsk?</summary>
+          <p>
+            Apertium er en av de beste åpne motorene for bokmål↔nynorsk og håndterer grammatikk og bøying godt.
+            Den sliter derimot med nyanser, fagtermer, egennavn og kontekstavhengig tolkning. Forvent å måtte lese
+            gjennom og korrigere.
+          </p>
+        </details>
+        <details>
+          <summary>Lagres teksten jeg skriver inn?</summary>
+          <p>
+            Nei. Nettleseren din sender forespørselen direkte til Apertium sitt åpne API. Denne siden lagrer ingenting
+            og sender ingenting videre til tredjeparter.
+          </p>
+        </details>
+        <details>
+          <summary>Kan jeg oversette lange tekster?</summary>
+          <p>
+            Ja, opp til 10 000 tegn per forespørsel. For større dokumenter anbefales det å dele dem opp, eller å bruke
+            en profesjonell oversetter for kvalitetskontroll.
+          </p>
+        </details>
+        <details>
+          <summary>Er dette en offisiell tjeneste fra Apertium?</summary>
+          <p>
+            Nei. Dette er en enkel nettside som bruker Apertium sitt åpne API. Siden er ikke tilknyttet eller endorsert
+            av Apertium-prosjektet.
+          </p>
+        </details>
+        <details>
+          <summary>Kan jeg oversette fra engelsk til nynorsk?</summary>
+          <p>
+            Ikke her ennå. Apertium har en engelsk-til-nynorsk-motor, men kvaliteten holder ikke profesjonelle mål.
+            For engelsk↔norsk anbefales en menneskelig oversetter. Du kan
+            <a href="https://sanderwestnes.com" target="_blank" rel="noopener">kontakte Sander Westnes</a>
+            for en profesjonell oversettelse.
+          </p>
+        </details>
+      </div>
+    </article>
   </main>
 
   <footer class="site-footer">
     <div class="wrap footer-wrap">
       <p>
-        Omsetjing er levert av
+        Oversettelsen er levert av
         <a href="https://apertium.org" target="_blank" rel="noopener">Apertium</a>
-        (open kjeldekode, GPL).
-        Tenesta er ikkje offisielt knytt til Apertium.
+        (åpen kildekode, GPL).
+        Denne tjenesten er ikke offisielt tilknyttet Apertium.
       </p>
       <p>
-        Laga av <a href="https://sanderwestnes.com" target="_blank" rel="noopener">sanderwestnes.com</a>
+        Laget av <a href="https://sanderwestnes.com" target="_blank" rel="noopener">sanderwestnes.com</a>
+        &middot; <a href="https://github.com/sandwes/nynorsk-omsetjar" target="_blank" rel="noopener">Kildekode på GitHub</a>
         &middot; <a href="https://github.com/apertium" target="_blank" rel="noopener">Apertium på GitHub</a>
       </p>
     </div>
   </footer>
 
-  <script src="script.js?v=2"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>
