@@ -1,33 +1,39 @@
-/* ---------- Design tokens ---------- */
+/* ---------- Design tokens — matched to sanderwestnes.com ---------- */
 :root {
-  --bg: #f7f8fa;
+  --bg: #faf7f5;              /* warm cream (body) */
   --surface: #ffffff;
-  --surface-2: #f1f3f5;
-  --border: #e3e5e8;
-  --text: #1f2328;
-  --text-muted: #5b6068;
-  --accent: #ba0c2f;          /* Norwegian flag red */
+  --surface-2: #f7f2ed;       /* slightly deeper cream (section alt) */
+  --border: #e8e0d9;          /* warm border */
+  --text: #3d3129;            /* warm dark brown (headings/body) */
+  --text-muted: #7a6352;      /* warm medium brown (secondary text) */
+  --accent: #e2755a;          /* terracotta — primary brand accent */
   --accent-ink: #ffffff;
-  --accent-soft: #fdecef;
-  --focus: #1a73e8;           /* Google-ish focus blue */
-  --shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 16px rgba(0,0,0,0.06);
+  --accent-soft: rgba(226, 117, 90, 0.1);
+  --accent-hover: #d06247;    /* darker terracotta for hover */
+  --secondary: #97d8cd;       /* sage/mint teal */
+  --secondary-soft: rgba(151, 216, 205, 0.3);
+  --focus: #e2755a;
+  --shadow: 0 1px 3px rgba(61, 49, 41, 0.04), 0 4px 16px rgba(61, 49, 41, 0.06);
   --radius: 12px;
-  --radius-sm: 8px;
-  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --radius-sm: 6px;
+  --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0f1115;
-    --surface: #181b21;
-    --surface-2: #22262e;
-    --border: #2b2f38;
-    --text: #e6e8eb;
-    --text-muted: #9aa1ab;
-    --accent: #ff4d6d;
-    --accent-ink: #1a0007;
-    --accent-soft: #2a1015;
-    --focus: #8ab4f8;
+    --bg: #1a1412;
+    --surface: #241c19;
+    --surface-2: #2e2520;
+    --border: #3d322c;
+    --text: #f0e8e2;
+    --text-muted: #b8a699;
+    --accent: #e88a72;
+    --accent-ink: #1a1412;
+    --accent-soft: rgba(232, 138, 114, 0.15);
+    --accent-hover: #f29e86;
+    --secondary: #97d8cd;
+    --secondary-soft: rgba(151, 216, 205, 0.12);
+    --focus: #e88a72;
     --shadow: 0 1px 3px rgba(0,0,0,0.3), 0 4px 24px rgba(0,0,0,0.4);
   }
 }
@@ -310,7 +316,7 @@ main { padding: 28px 0 48px; }
 .cta-banner {
   margin-top: 28px;
   padding: 28px 32px;
-  background: linear-gradient(135deg, var(--accent) 0%, #7a0820 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, #a84a33 100%);
   color: #fff;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
