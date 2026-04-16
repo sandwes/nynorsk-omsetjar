@@ -82,34 +82,50 @@ a:hover { text-decoration: underline; }
 
 .brand {
   display: inline-flex;
-  align-items: center;
-  gap: 10px;
+  align-items: baseline;
+  gap: 8px;
   color: var(--text);
-  font-weight: 600;
-  font-size: 1.05rem;
-}
-.brand:hover { text-decoration: none; }
-
-.brand-mark {
-  display: inline-grid;
-  place-items: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  background: var(--accent);
-  color: var(--accent-ink);
-  font-family: Georgia, serif;
   font-weight: 700;
-  font-size: 1rem;
-  letter-spacing: -0.5px;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+  transition: opacity 120ms ease;
+}
+.brand:hover { text-decoration: none; opacity: 0.85; }
+
+.brand-name { color: var(--text); }
+
+.brand-sep {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: inline-block;
+  transform: translateY(-2px);
 }
 
-.header-nav a {
+.brand-product {
   color: var(--text-muted);
-  font-size: 0.95rem;
   font-weight: 500;
+  font-size: 0.95rem;
 }
-.header-nav a:hover { color: var(--accent); text-decoration: none; }
+
+.header-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent);
+  color: #fff !important;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 120ms ease, transform 120ms ease;
+}
+.header-cta:hover {
+  background: var(--accent-hover);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
 
 /* ---------- Translator ---------- */
 main { padding: 28px 0 48px; }
@@ -356,17 +372,17 @@ main { padding: 28px 0 48px; }
   box-shadow: 0 6px 16px rgba(0,0,0,0.2);
 }
 
-/* ---------- Footer ---------- */
+/* ---------- Footer (pale sage band, echoing sanderwestnes.com's teal section) ---------- */
 .site-footer {
-  margin-top: 40px;
-  padding: 28px 0;
-  border-top: 1px solid var(--border);
-  color: var(--text-muted);
+  margin-top: 48px;
+  padding: 32px 0;
+  background: var(--secondary-soft);
+  color: var(--text);
   font-size: 0.9rem;
 }
-.footer-wrap p { margin: 4px 0; }
-.footer-wrap a { color: var(--text-muted); text-decoration: underline; }
-.footer-wrap a:hover { color: var(--accent); }
+.footer-wrap p { margin: 4px 0; color: var(--text-muted); }
+.footer-wrap a { color: var(--text); text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 2px; }
+.footer-wrap a:hover { color: var(--accent); text-decoration-color: var(--accent); }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 720px) {
