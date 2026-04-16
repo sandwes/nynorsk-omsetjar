@@ -303,6 +303,7 @@ main { padding: 28px 0 48px; }
   display: inline-flex;
   gap: 4px;
 }
+.loader[hidden] { display: none; }
 .loader .dot {
   width: 6px;
   height: 6px;
